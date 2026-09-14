@@ -1,0 +1,9 @@
+{
+  "name": "news-daily",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small Gemini-powered news reader",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A focused daily news reader powered by Gemini.">
+  <title>news.daily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="news.daily home"><span class="brand-mark">N</span><span>news<span class="brand-dot">.</span>daily</span></a>
+      <div class="live-status"><span class="pulse"></span>Updated by Gemini</div>
+    </header>
+
+    <main>
+      <section class="masthead">
+        <div>
+          <p class="eyebrow">Sunday, 13 September 2026</p>
+          <h1>What matters<br><em>right now.</em></h1>
+        </div>
+        <p class="intro">A sharp, human-sized briefing for the curious. Search a story, choose a beat, and let the news come through.</p>
+      </section>
+
+      <section class="controls" aria-label="News filters">
+        <form id="search-form" class="search-box">
+          <span class="search-icon">⌕</span>
+          <input id="topic-input" type="search" placeholder="Search a topic..." aria-label="Search a topic">
+          <button type="submit">Find stories</button>
+        </form>
+        <div id="category-tabs" class="category-tabs" role="tablist" aria-label="News categories">
+          <button class="category active" data-category="Top stories" role="tab" aria-selected="true">Top stories</button>
+          <button class="category" data-category="India" role="tab" aria-selected="false">India</button>
+          <button class="category" data-category="World" role="tab" aria-selected="false">World</button>
+          <button class="category" data-category="Technology" role="tab" aria-selected="false">Technology</button>
+          <button class="category" data-category="Business" role="tab" aria-selected="false">Business</button>
+          <button class="category" data-category="Science" role="tab" aria-selected="false">Science</button>
+          <button class="category" data-category="Culture" role="tab" aria-selected="false">Culture</button>
+        </div>
+      </section>
+
+      <section class="section-heading">
+        <div><span class="section-kicker">The briefing</span><h2 id="feed-title">Top stories</h2></div>
+        <span id="story-count" class="story-count"></span>
+      </section>
+
+      <div id="news-grid" class="news-grid" aria-live="polite"></div>
+      <div id="error-state" class="error-state" hidden></div>
+    </main>
+
+    <footer><span>news.daily</span><span>Clear context, less noise.</span></footer>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
